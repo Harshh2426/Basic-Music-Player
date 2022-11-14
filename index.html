@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Basic music player</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap");
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        font-family: "Dancing Script", cursive;
+      }
+      .container {
+        height: 100vh;
+        width: 100vw;
+        background: url("image.png");
+        background-position: center;
+        background-size: cover;
+      }
+      .header {
+        /* background-color: black; */
+        color: transparent;
+        height: 12vh;
+        width: 100vw;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      .logo {
+        /* background-color: red; */
+
+        width: 20vw;
+        height: 12vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .logo img {
+        /* background-color: yellow; */
+        border: 1px solid rgb(235, 230, 230);
+        width: 140px;
+        cursor: pointer;
+      }
+      .list {
+        height: 12vh;
+        width: 40vw;
+        /* background-color: red; */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .list ul {
+        /* background-color: blue; */
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      li {
+        list-style: none;
+        /* margin: 5px; */
+      }
+      .list a {
+        margin-left: 10px;
+        padding: 10px;
+        font-weight: 600;
+        /* background-color: blueviolet; */
+        color: white;
+        font-size: 27px;
+      }
+      .list a:hover {
+        color: #f0b4be;
+        cursor: pointer;
+      }
+      main {
+        height: 85vh;
+        width: 100vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        /* background-color: yellow; */
+      }
+      .left {
+        height: 85vh;
+        width: 50vw;
+        display: flex;
+        align-items: center;
+        /* background-color: blue; */
+      }
+      .heading {
+        font-size: 60px;
+        margin: 25px 20px;
+      }
+      .secondary {
+        font-size: 25px;
+        margin-left: 20px;
+      }
+      .right {
+        height: 85vh;
+        width: 50vw;
+        /* margin-left: 40px; */
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        /* background-color: aqua; */
+      }
+      .content {
+        margin-left: 180px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <div class="logo">
+          <img src="logo.png" alt="error 4o4" title="logo" />
+        </div>
+        <div class="list">
+          <ul>
+            <li><a>Home</a></li>
+            <li><a>Services</a></li>
+            <li><a>Contact</a></li>
+            <li><a>Gallery</a></li>
+            <li><a>About us</a></li>
+          </ul>
+        </div>
+      </div>
+      <main>
+        <div class="left">
+          <div class="content">
+            <p class="heading">Music player</p>
+            <p class="secondary">Using Html, Css and Javascript</p>
+          </div>
+        </div>
+        <div class="right">
+          <div class="content">
+            <p class="heading">Click the button</p>
+            <p class="heading">for <span id="sentchange">PLAY</span></p>
+            <p class="heading">the song</p>
+          </div>
+          <div class="btn">
+            <img
+              src="play.png"
+              id="imgchange"
+              title="for play/pause the song"
+            />
+          </div>
+          <audio id="mysong">
+            <source src="music.mp3" type="audio/mp3" />
+          </audio>
+        </div>
+      </main>
+    </div>
+    <script>
+      let song = document.getElementById("mysong");
+      let sent = document.getElementById("sentchange");
+      let photo = document.getElementById("imgchange");
+      photo.onclick = function () {
+        if (song.paused) {
+          song.play();
+          sent.innerHTML = "PAUSE";
+          photo.src = "pause.png";
+        } else if (song.play) {
+          song.pause();
+          sent.innerHTML = "PLAY";
+          photo.src = "play.png";
+        }
+      };
+      document.getElementById("#sentchange").innerHTML = "PAUSE";
+    </script>
+  </body>
+</html>
