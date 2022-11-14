@@ -16,6 +16,6 @@ To add functionality on clicking an image.
 
 ## Screenshots
 
-![Music pause screen](https://raw.githubusercontent.com/Harshh2426/Web-Development-Project/main/screenshots/website%201.png)
+![Music pause screen](https://raw.githubusercontent.com/Harshh2426/Basic-Music-Player/main/screenshots/website%201.png)
 
-![Music play screen](https://raw.githubusercontent.com/Harshh2426/Web-Development-Project/main/screenshots/website%202.png)
+![Music play screen](https://raw.githubusercontent.com/Harshh2426/Basic-Music-Player/main/screenshots/website%202.png)
